@@ -1,0 +1,18 @@
+<table class="table">
+  <tr>
+    <th>今日の投稿数</th>
+    <th>前日の投稿数</th>
+    <th>前日比</th>
+  </tr>
+  <tr>
+    <td><%= today_record.count %></td>
+    <td><%= yesterday_record.count %></td>
+    <td>
+      <% if yesterday_record.count == 0 %>
+        前日の投稿はありません
+      <% else %>
+        <%= (today_record.count / yesterday_record.count).round %>
+      <% end %>
+      </td>
+  </tr>
+</table>
