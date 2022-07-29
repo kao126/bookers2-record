@@ -1,0 +1,18 @@
+<table class="table">
+  <tr>
+    <th>今週の投稿数</th>
+    <th>前週の投稿数</th>
+    <th>前週比</th>
+  </tr>
+  <tr>
+    <td><%= this_week_record.count %></td>
+    <td><%= last_week_record.count %></td>
+    <td>
+      <% if last_week_record.count == 0 %>
+        前週の投稿はありません
+      <% else %>
+        <%= (this_week_record.count / last_week_record.count.to_f * 100).round %> %
+      <% end %>
+      </td>
+  </tr>
+</table>

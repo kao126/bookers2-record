@@ -11,7 +11,7 @@
       <% if yesterday_record.count == 0 %>
         前日の投稿はありません
       <% else %>
-        <%= (today_record.count / yesterday_record.count).round %>
+        <%= (today_record.count / yesterday_record.count.to_f * 100).round %> %
       <% end %>
       </td>
   </tr>
