@@ -10,9 +10,12 @@ import "channels"
 import "jquery";
 import "popper.js";
 import "bootstrap";
+import Chart from 'chart.js/auto';
 import "../stylesheets/application"
 import '@fortawesome/fontawesome-free/js/all'
 
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+global.Chart = Chart;
